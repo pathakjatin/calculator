@@ -13,6 +13,12 @@ Array.from(buttons).forEach((button) =>{
             newString = "";
             document.querySelector('.inp').value=newString;
         }
+        else if(e.target.innerHTML == 'DEL'){
+            newString = newString.slice(0,-1);
+            document.querySelector('.inp').value = newString;
+            // display.value = display.value.slice(0,-1);
+
+        }
         else{
             console.log(e.target)
             newString = newString + e.target.innerText;
